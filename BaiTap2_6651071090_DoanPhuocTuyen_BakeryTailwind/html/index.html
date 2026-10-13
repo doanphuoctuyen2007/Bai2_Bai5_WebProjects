@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sweet House - tiệm bánh ngọt tươi ngon mỗi ngày.">
+  <title>Sweet House | Tiệm bánh ngọt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-amber-50 text-stone-800">
+  <header class="sticky top-0 z-50 bg-white/95 shadow-md">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+      <a href="#trang-chu" class="text-2xl font-extrabold text-amber-700">Sweet House<span class="text-rose-500">.</span></a>
+      <button id="menu-button" class="rounded-lg border border-amber-300 px-3 py-2 text-2xl md:hidden" aria-label="Mở menu" aria-expanded="false">☰</button>
+      <div id="menu" class="mobile-menu hidden absolute left-0 top-full w-full flex-col gap-4 bg-white px-5 py-5 shadow-md md:static md:flex md:w-auto md:flex-row md:items-center md:bg-transparent md:p-0 md:shadow-none">
+        <a class="nav-link" href="#trang-chu">Trang chủ</a>
+        <a class="nav-link" href="#menu-banh">Menu bánh</a>
+        <a class="nav-link" href="#cau-chuyen">Câu chuyện</a>
+        <a class="nav-link" href="#dat-banh">Đặt bánh</a>
+        <a class="rounded-full bg-amber-600 px-5 py-2 font-semibold text-white transition hover:bg-amber-700" href="#dat-banh">Đặt ngay</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="trang-chu" class="hero-section">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:py-24">
+        <div>
+          <p class="mb-4 inline-block rounded-full bg-rose-100 px-4 py-2 text-sm font-bold text-rose-700">Bánh tươi mỗi ngày</p>
+          <h1 class="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">Một chút ngọt ngào, <span class="text-amber-700">vạn niềm vui.</span></h1>
+          <p class="mt-5 max-w-xl text-lg leading-8 text-stone-600">Những chiếc bánh được làm thủ công từ nguyên liệu chọn lọc, giúp ngày thường của bạn trở nên thật đặc biệt.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#menu-banh" class="rounded-full bg-amber-600 px-7 py-3 font-bold text-white shadow-lg transition hover:-translate-y-1 hover:bg-amber-700">Khám phá menu</a>
+            <a href="#cau-chuyen" class="rounded-full border-2 border-amber-700 px-7 py-3 font-bold text-amber-800 transition hover:bg-amber-100">Về chúng tôi</a>
+          </div>
+          <div class="mt-8 flex gap-8 text-sm text-stone-600"><p><strong class="block text-2xl text-amber-800">100%</strong> Bánh tươi</p><p><strong class="block text-2xl text-amber-800">6+</strong> Vị bánh ngon</p><p><strong class="block text-2xl text-amber-800">♥</strong> Làm bằng tâm huyết</p></div>
+        </div>
+        <div class="hero-image-wrap">
+          <img class="hero-image" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1100&q=85" alt="Bánh kem trang trí đẹp mắt">
+          <div class="floating-note"><span class="text-2xl">🧁</span><div><strong>Bánh ngon mỗi ngày</strong><p class="text-sm text-stone-500">Tươi mới từ lò bánh</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu-banh" class="mx-auto max-w-7xl px-5 py-16">
+      <div class="mb-10 text-center"><p class="font-bold uppercase tracking-widest text-amber-700">Ngọt ngào khó cưỡng</p><h2 class="mt-2 text-3xl font-extrabold sm:text-4xl">Menu bánh nổi bật</h2><p class="mx-auto mt-3 max-w-2xl text-stone-600">Mỗi chiếc bánh là một niềm vui nhỏ được chuẩn bị dành riêng cho bạn.</p></div>
+      <!-- Khác với Bootstrap sử dụng Card component dựng sẵn, ở đây em tự phối nhiều utility-class của Tailwind để tạo từng thẻ bánh.
+           Các class như rounded-2xl, shadow-lg, hover:shadow-xl và transition giúp tuỳ chỉnh giao diện trực tiếp trong HTML.
+           Đây là cách tiếp cận utility-first của Tailwind CSS. -->
+      <div class="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="cake-card"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80" alt="Bánh kem dâu"><div class="p-5"><span class="tag">Bán chạy</span><h3 class="mt-3 text-xl font-bold">Bánh kem dâu</h3><p class="mt-2 text-stone-600">Kem mềm mịn, dâu tươi chua ngọt hài hòa.</p><div class="mt-4 flex items-center justify-between"><strong class="text-lg text-amber-700">250.000đ</strong><a class="order-link" href="#dat-banh">Đặt bánh →</a></div></div></article>
+        <article class="cake-card"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80" alt="Bánh cupcake"><div class="p-5"><span class="tag">Dễ thương</span><h3 class="mt-3 text-xl font-bold">Cupcake vanilla</h3><p class="mt-2 text-stone-600">Bánh nhỏ xinh với lớp kem vanilla thơm béo.</p><div class="mt-4 flex items-center justify-between"><strong class="text-lg text-amber-700">35.000đ</strong><a class="order-link" href="#dat-banh">Đặt bánh →</a></div></div></article>
+        <article class="cake-card"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80" alt="Bánh brownie chocolate"><div class="p-5"><span class="tag">Chocolate</span><h3 class="mt-3 text-xl font-bold">Brownie chocolate</h3><p class="mt-2 text-stone-600">Đậm vị cacao, bên ngoài hơi giòn, bên trong mềm ẩm.</p><div class="mt-4 flex items-center justify-between"><strong class="text-lg text-amber-700">45.000đ</strong><a class="order-link" href="#dat-banh">Đặt bánh →</a></div></div></article>
+        <article class="cake-card"><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=80" alt="Bánh macaron"><div class="p-5"><span class="tag">Thanh lịch</span><h3 class="mt-3 text-xl font-bold">Macaron Pháp</h3><p class="mt-2 text-stone-600">Vỏ bánh giòn nhẹ, nhân thơm với nhiều màu sắc.</p><div class="mt-4 flex items-center justify-between"><strong class="text-lg text-amber-700">30.000đ</strong><a class="order-link" href="#dat-banh">Đặt bánh →</a></div></div></article>
+        <article class="cake-card"><img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=700&q=80" alt="Bánh croissant"><div class="p-5"><span class="tag">Bữa sáng</span><h3 class="mt-3 text-xl font-bold">Croissant bơ</h3><p class="mt-2 text-stone-600">Nhiều lớp bánh xốp giòn, thơm mùi bơ Pháp.</p><div class="mt-4 flex items-center justify-between"><strong class="text-lg text-amber-700">40.000đ</strong><a class="order-link" href="#dat-banh">Đặt bánh →</a></div></div></article>
+        <article class="cake-card"><img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=700&q=80" alt="Bánh tart trái cây"><div class="p-5"><span class="tag">Trái cây</span><h3 class="mt-3 text-xl font-bold">Tart trái cây</h3><p class="mt-2 text-stone-600">Đế bánh giòn cùng kem trứng và trái cây theo mùa.</p><div class="mt-4 flex items-center justify-between"><strong class="text-lg text-amber-700">55.000đ</strong><a class="order-link" href="#dat-banh">Đặt bánh →</a></div></div></article>
+      </div>
+    </section>
+
+    <section id="cau-chuyen" class="bg-white py-16">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2">
+        <img class="story-image" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=85" alt="Thợ làm bánh đang chuẩn bị bánh">
+        <div><p class="font-bold uppercase tracking-widest text-amber-700">Câu chuyện của chúng tôi</p><h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">Bắt đầu từ tình yêu với những chiếc bánh.</h2><p class="mt-5 leading-8 text-stone-600">Sweet House được tạo nên từ mong muốn mang đến những món bánh <strong class="text-amber-700">tươi ngon và chất lượng</strong>. Chúng tôi tin rằng một chiếc bánh nhỏ có thể làm ngày của ai đó trở nên đáng nhớ hơn.</p><p class="mt-4 leading-8 text-stone-600">Từ khâu chọn nguyên liệu đến trang trí, mỗi công đoạn đều được thực hiện bằng sự <em class="font-semibold text-amber-700">tỉ mỉ và chân thành</em>.</p><a href="#dat-banh" class="mt-6 inline-block rounded-full bg-amber-600 px-6 py-3 font-bold text-white hover:bg-amber-700">Gửi yêu cầu cho chúng tôi</a></div>
+      </div>
+    </section>
+
+    <section id="dat-banh" class="mx-auto max-w-7xl px-5 py-16">
+      <div class="grid gap-8 lg:grid-cols-3">
+        <div class="rounded-2xl bg-white p-7 shadow-lg lg:col-span-2"><p class="font-bold uppercase tracking-widest text-amber-700">Đặt bánh dễ dàng</p><h2 class="mt-2 text-3xl font-extrabold">Bạn muốn đặt chiếc bánh nào?</h2><p class="mt-3 text-stone-600">Điền thông tin bên dưới, Sweet House sẽ liên hệ để xác nhận đơn hàng.</p>
+          <form id="order-form" class="mt-7 grid gap-4 sm:grid-cols-2">
+            <div><label class="mb-2 block font-semibold" for="fullname">Họ và tên</label><input id="fullname" name="fullname" required class="form-input" placeholder="Nguyễn Văn A"></div>
+            <div><label class="mb-2 block font-semibold" for="phone">Số điện thoại</label><input id="phone" name="phone" type="tel" required pattern="[0-9+ ]{9,15}" class="form-input" placeholder="09xxxxxxxx"></div>
+            <div class="sm:col-span-2"><label class="mb-2 block font-semibold" for="cake">Loại bánh muốn đặt</label><select id="cake" name="cake" class="form-input"><option>Bánh kem dâu</option><option>Cupcake vanilla</option><option>Brownie chocolate</option><option>Macaron Pháp</option><option>Croissant bơ</option><option>Tart trái cây</option><option>Bánh thiết kế theo yêu cầu</option></select></div>
+            <div class="sm:col-span-2"><label class="mb-2 block font-semibold" for="message">Ghi chú</label><textarea id="message" name="message" rows="3" class="form-input" placeholder="Số lượng, ngày nhận bánh, yêu cầu trang trí..."></textarea></div>
+            <div class="sm:col-span-2"><button class="rounded-full bg-amber-600 px-7 py-3 font-bold text-white transition hover:bg-amber-700" type="submit">Gửi yêu cầu đặt bánh</button><p id="form-message" class="mt-3 font-semibold text-green-700" role="status"></p></div>
+          </form>
+        </div>
+        <aside class="rounded-2xl border border-amber-200 bg-amber-100 p-7"><span class="text-4xl">🎂</span><h3 class="mt-4 text-2xl font-extrabold">Đặt bánh theo yêu cầu</h3><p class="mt-3 leading-7 text-stone-600">Sinh nhật, kỷ niệm hay một dịp đặc biệt? Chúng tôi nhận trang trí bánh theo chủ đề và thông điệp của bạn.</p><div class="mt-5 rounded-xl bg-white p-4"><p class="font-bold text-amber-800">Ưu đãi khách mới</p><p class="mt-1 text-sm text-stone-600">Giảm 10% cho đơn hàng đầu tiên từ 300.000đ.</p></div><p class="mt-5 text-sm text-stone-600">☎ 0943 962 759<br>✉ TiemBanhcuaTuyen@sweethouse.vn</p></aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-stone-900 text-stone-200">
+    <div class="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:grid-cols-2 md:grid-cols-4">
+      <div><a href="#trang-chu" class="text-2xl font-extrabold text-amber-400">Sweet House.</a><p class="mt-3 leading-7 text-stone-400">Gửi vị ngọt, trao yêu thương. Bánh tươi được làm mỗi ngày.</p></div>
+      <div><h3 class="font-bold text-white">Liên hệ</h3><p class="mt-3 leading-7 text-stone-400">C24/1A,đường 449,Phường Tăng Nhơn Phú<br>TP. Hồ Chí Minh<br>0943 962 759</p></div>
+      <div><h3 class="font-bold text-white">Giờ mở cửa</h3><p class="mt-3 leading-7 text-stone-400">Thứ 2 – Thứ 7: 08:00–21:00<br>Chủ nhật: 09:00–20:00</p></div>
+      <div><h3 class="font-bold text-white">Theo dõi chúng tôi</h3><p class="mt-3 leading-7 text-stone-400">Facebook · Instagram · TikTok</p></div>
+    </div>
+    <div class="border-t border-stone-700 px-5 py-4 text-center text-sm text-stone-400">© 2026 Sweet House. Bản quyền thuộc về Sweet House.</div>
+  </footer>
+  <script src="../js/script.js"></script>
+</body>
+</html>

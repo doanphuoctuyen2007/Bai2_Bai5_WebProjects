@@ -1,0 +1,26 @@
+/* CSS bổ sung cho giao diện Tailwind */
+html { scroll-behavior: smooth; }
+body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+.nav-link { color: #57534e; font-weight: 600; transition: color .2s; }
+.nav-link:hover { color: #b45309; }
+.hero-section { background: radial-gradient(circle at 85% 20%, #fde68a 0, #fffbeb 38%, #fff7ed 100%); }
+/* Tuỳ biến khung ảnh hero */
+.hero-image-wrap { position: relative; padding: 0 0 22px 22px; }
+.hero-image { width: 100%; height: 440px; object-fit: cover; border-radius: 2rem; box-shadow: 0 25px 55px rgba(120, 53, 15, .2); }
+.floating-note { position: absolute; left: 0; bottom: 0; display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-radius: 16px; background: white; box-shadow: 0 12px 30px #78350f22; }
+/* Tuỳ biến thẻ bánh thay vì dùng component có sẵn */
+.cake-card { overflow: hidden; border-radius: 1.25rem; background: white; box-shadow: 0 10px 25px rgba(28, 25, 23, .08); transition: transform .25s, box-shadow .25s; }
+.cake-card:hover { transform: translateY(-6px); box-shadow: 0 18px 35px rgba(120, 53, 15, .16); }
+.cake-card img { width: 100%; height: 230px; object-fit: cover; }
+.tag { display: inline-block; border-radius: 999px; background: #fef3c7; padding: 5px 11px; color: #92400e; font-size: .75rem; font-weight: 800; }
+.order-link { color: #b45309; font-weight: 700; }
+.order-link:hover { color: #78350f; }
+.story-image { width: 100%; height: 430px; object-fit: cover; border-radius: 1.5rem; box-shadow: 0 15px 35px #29252418; }
+/* Tuỳ biến ô nhập liệu và hiệu ứng focus */
+.form-input { width: 100%; border: 1px solid #d6d3d1; border-radius: .75rem; background: #fff; padding: .8rem 1rem; outline: none; transition: border-color .2s, box-shadow .2s; }
+.form-input:focus { border-color: #d97706; box-shadow: 0 0 0 3px rgba(245, 158, 11, .2); }
+@media (max-width: 767px) {
+  .hero-image { height: 310px; }
+  .story-image { height: 300px; }
+  .mobile-menu { border-top: 1px solid #f5f5f4; }
+}
